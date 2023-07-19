@@ -1,0 +1,416 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cuprum&display=swap');
+
+body{
+    background-color: #FAFAFA;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container-css{
+    display: none;
+    width: 100%;
+    height:40px;
+    position: relative;
+    overflow: hidden;
+}
+.menu-icon{
+    width:35px;
+    position:absolute;
+    top:5%;
+    right: 10%;
+    cursor:pointer;
+}
+
+.menu-box{
+    width: 100%;
+    background: rgb(175, 175, 175);
+    position: absolute;
+    display: none;
+    transition:top 1s;
+    
+}
+
+.right-link{
+    position: absolute;
+    top: 30px;
+    right:30px;
+    display: flex;
+    align-items: end;
+}
+
+.right-link img{
+    width:40px;
+    height: 40px;
+    cursor:pointer;
+    margin-top:-20px;
+
+}
+
+.menu-links a{
+    font-family: 'Cuprum', sans-serif;
+    text-decoration: none;
+    color: #000000;
+
+    display:block;
+    margin: 16px 10px;
+    font-size: 36px;
+}
+.menu-links a:hover{
+    font-family: 'Cuprum', sans-serif;
+    text-decoration: none;
+    color: #000000;
+    display:block;
+    margin: 16px 10px;
+    font-size: 36px;
+}
+
+.navbar{
+    display: block;
+    background-color: #7C73E6;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 0 24px;
+    font-size: 3rem;
+    font-family: 'Cuprum', sans-serif;
+}
+.nav-elements{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap:60px;
+    color: black
+}
+
+.nav-link{
+    transition: 0.3s ease;
+}
+
+.nav-link:hover{
+    opacity: 0.5;
+}
+
+.grid-media{
+    display: grid ;
+    grid-template-rows: 30px;
+    grid-template-columns: repeat(4,60px);
+    grid-column-gap: 70px;
+    grid-row-gap: 20px;
+    margin-top: 20px;
+}
+
+.grid-media-element img{
+    height: 100px;
+    width:100px;
+}
+.grid-media-element:hover{
+    opacity: 0.6;
+}
+
+
+.Definition{
+    margin-top: 50px;
+}
+.Definition > h1{
+    font-weight: 700;
+    font-size: 3rem;
+    font-family: 'Cuprum', sans-serif;
+}
+
+.Skills{
+    margin-top: 40px;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(5,10rem); 
+    grid-template-rows:minmax(0rem) repeat(1,6rem);
+    grid-column-gap: 70px;
+    grid-row-gap: 30px;
+}
+.Skill-element{
+    box-shadow: 0 2px 9px #27374D;
+    font-size:2rem;
+    height: 100px;
+    font-weight: 600;
+    background-color: #FAFAFA;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.Skill-element-large{
+    box-shadow: 0 2px 9px #27374D;
+    font-size:1.4rem;
+    height: 100px;
+    font-weight: 600;
+    background-color: #FAFAFA;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.Skill-element:hover , .Skill-element-large:hover {
+    box-shadow: 0 2px 9px #27374D;
+    text-align: center;
+    font-weight: 600;
+    background-color: #C4C1E0;
+    transform: scale(1.2);
+    opacity:0.7;
+}
+
+
+.Services-list >li{
+    margin-bottom: 20px;
+}
+
+.Title{
+    font-size:3.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+    text-decoration: underline;
+}
+.Detail{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.span{
+    font-size: 2.1rem;
+}
+
+
+.Footer{
+    position:relative ;
+    bottom: 0;
+    height: 200px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #7C73E6;
+    color:#DDE6ED;
+}
+
+.box{
+    
+    box-shadow: 0 2px 9px #27374D;
+    display: flexbox;
+    width:50%;
+    height:250px;
+    background-color: #FAFAFA;
+    font-size: 2.5rem;
+    font-family: 'Cuprum', sans-serif;
+    text-align: center;
+    padding-top: 40px;
+    border-radius: 10px;
+    margin-left: 300px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+.box-about{
+    width:70%;
+    background-color: #9DB2BF;
+    font-size: 1.4rem;
+    font-family: 'Cuprum', sans-serif;
+    text-align: center;
+    padding-top: 40px;
+    border-radius: 10px;
+    margin-left: 200px;
+    margin-top :100px;
+    font-weight: 600;
+    
+}
+
+.github{
+    text-decoration: none;
+    color: #7C73E6;
+}
+.github:hover{
+    text-decoration: none;
+    color: rgb(193, 224, 252);
+}
+
+/**********************************/
+.Nav-sm{
+    height:90px;
+}
+
+
+@media screen and (max-width:1010px){
+    .Header{
+        display: none;
+    }
+
+    .Header-phone{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .menu{
+        background-color: #9DB2BF;
+        display: none;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+@media(max-width:1010px){
+    .navbar{
+        display: none;
+    }
+    .container-css{
+        display: block;
+        width: 100%;
+        height:40px;
+    }
+    .grid-media{
+        display: grid ;
+        grid-template-rows: 30px;
+        grid-template-columns: repeat(4,10px);
+        grid-column-gap: 70px;
+        grid-row-gap: 20px;
+    }
+    
+    .grid-media-element img{
+        height: 40px;
+        width:40px;
+    }
+
+    .Skills-Title{
+        font-size:2rem;
+        text-align: center;
+        text-decoration: underline;
+    }
+    .Skills{
+        margin-top: 40px;
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(3,80px); 
+        grid-template-rows:minmax(0rem) repeat(1,6rem);
+        grid-column-gap: 70px;
+        grid-row-gap: 30px;
+    }
+    .Skill-element{
+        box-shadow: 0 2px 9px #27374D;
+        font-size:1rem;
+        height: 100px;
+        border-radius: 100%;
+        font-weight: 600;
+        background-color: #9DB2BF;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+    .Skill-element-large{
+        box-shadow: 0 2px 9px #27374D;
+        font-size:0.9rem;
+        height: 100px;
+        border-radius: 100%;
+        font-weight: 600;
+        background-color: #9DB2BF;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+    .Skill-element:hover{
+        box-shadow: 0 2px 9px #27374D;
+        font-size:1rem;
+        text-align: center;
+        font-weight: 600;
+        background-color: #9DB2BF;
+        transform: scale(1.2);
+        opacity:0.7;
+    }
+
+    .Services-Title{
+        font-size:2rem;
+        margin-bottom: 20px;
+        text-decoration: underline;
+        text-align: center;
+        margin-bottom:40px;
+        
+    }
+
+    .Education-Title{
+        font-size:2rem;
+        margin-bottom: 20px;
+        text-align: center;
+        text-decoration: underline;
+    }
+    .Education-Detail{
+        margin-left: 20px;
+        text-align: start;
+    }
+    .span{
+        font-size: 1.1rem;
+    }
+    .Language-Title{
+        font-size:2rem;
+        margin-bottom: 20px;
+        text-decoration: underline;
+        text-align: center;
+    }
+    .Language-Detail{
+        margin-left: 20px;
+        text-align: center;
+    }
+
+    .box-about{
+        background-color: #9DB2BF;
+        font-size: 1.4rem;
+        font-family: 'Cuprum', sans-serif;
+        text-align: center;
+        padding-top: 40px;
+        border-radius: 10px;
+        margin-top :100px;
+        font-weight: 600;
+    }
+    .box{
+        display:flexbox;
+        width:200px;
+        height: 150px;
+        background-color: #9DB2BF;
+        font-size: 1rem;
+        margin-left: 80px;
+        font-family: 'Cuprum', sans-serif;
+        text-align: center;
+        padding-top: 40px;
+        border-radius: 10px;
+        font-weight: 800;
+        margin-bottom: 20px;
+    }
+    
+    .github{
+        text-decoration: none;
+        color: aliceblue;
+    }
+    .github:hover{
+        text-decoration: none;
+        color: rgb(193, 224, 252);
+    }
+    
+}
+
+.roll-up{
+    background-image: url("./Media/up-arrow.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #7C73E6;
+    right:0;
+    bottom: 0;
+    width:50px;
+    height: 50px;
+    position:fixed;
+}
