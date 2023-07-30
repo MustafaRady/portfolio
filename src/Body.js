@@ -87,9 +87,9 @@ export default function Body(){
         <div className="container">
             <div className=" md:columns-2 md:py-10 mb-4 "  >
                 <div className="flex flex-col justify-center items-center justify-center mr-4 " >
-                    <h1 className="md:text-5xl text-2xl font-bold" > I'm ,</h1>
-                    <h1 className="md:text-5xl text-2xl font-bold"> Moustafa Radi,</h1>
-                    <h2 className="md:text-5xl text-2xl font-bold"> A Full Stack Developer </h2>
+                    <h1 className="md:text-5xl text-xl font-bold" > I'm ,</h1>
+                    <h1 className="md:text-5xl text-xl font-bold"> Moustafa Radi,</h1>
+                    <h2 className="md:text-5xl text-xl font-bold"> A Full Stack Developer </h2>
                     <p className="md:text-2xl text-xs text-center font-bold py-10" >Unleash our creativity and build something extraordinary side by side</p>
                     <div className="md:grid md:grid-cols-4 md:gap-5 md:my-10 flex flex-row md:py-6 gap-x-4 justify-center">
                         <a href="/" className="h-8 w-8 md:h-16 md:w-16"><img alt="" src={whatsapp}  ></img></a>
