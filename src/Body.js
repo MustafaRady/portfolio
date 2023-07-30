@@ -86,7 +86,7 @@ export default function Body(){
         <>
         <div className="container">
             <div className=" md:columns-2 md:py-10 mb-4 "  >
-                <div className="flex flex-col justify-center items-center mr-4 " >
+                <div className="flex flex-col justify-center items-center justify-center mr-4 " >
                     <h1 className="md:text-5xl text-2xl font-bold" > I'm ,</h1>
                     <h1 className="md:text-5xl text-2xl font-bold"> Moustafa Radi,</h1>
                     <h2 className="md:text-5xl text-2xl font-bold"> A Full Stack Developer </h2>
