@@ -1,14 +1,9 @@
-import React, { useLayoutEffect } from "react";
+import React from "react";
 import { useNavigate } from "react-router-dom";
 
 export default function PageNotFound(){
 
     const navigate= useNavigate();
-    // useLayoutEffect=(()=>{
-    //     const btn= document.getElementById("btn");
-    //     btn.setAttribute("className","btn btn-danger");
-    //     btn.style.marginLeft = "47%";
-    // })
     return(
         <div>
             <div className="container">
