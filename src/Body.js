@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect,  useState } from "react";
 import Footer from "./Footer";
 import Detail from "./Detail/Detail";
 import Projects from "./Projects";
@@ -216,7 +216,7 @@ export default function Body(){
         else{
             skillsControl.start("hidden")
         }
-    },[isVisible ,isVisibleSkill])
+    },[isVisible ,isVisibleSkill,skillsControl,mainControl])
    
 
     function openPop(element){
