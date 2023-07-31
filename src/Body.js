@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Footer from "./Footer";
 import Detail from "./Detail/Detail";
 import Projects from "./Projects";
@@ -13,11 +13,13 @@ import linkedIn from "./Media/linkedin .png"
 import {Swiper,SwiperSlide} from "swiper/react";
 import 'swiper/css';
 import 'swiper/css/pagination';
+import { motion, useAnimation } from "framer-motion"
 
 
 
 
 import {Pagination} from "swiper/modules"
+import { useInView } from "react-hook-inview";
 
 
 
@@ -175,6 +177,14 @@ export default function Body(){
     const [title ,setTitle] = useState("");
     const [detail ,setDetail] = useState("");
     const [image ,setImage] = useState();
+    const [ref,isVisible]=useInView({
+        threshold:1,
+    })
+    const [refSkill,isVisibleSkill]=useInView({
+        threshold:1,
+    })
+    const mainControl = useAnimation();
+    const skillsControl = useAnimation();
 
     useEffect(()=>{
         function updateSize(){
@@ -188,9 +198,26 @@ export default function Body(){
             }
 
         }
+       
         updateSize();
         window.addEventListener("resize",updateSize)
     },[])
+
+    useEffect(()=>{
+        if(isVisible){
+            mainControl.start("visible")
+        }
+        else{
+            mainControl.start("hidden")
+        }
+        if(isVisibleSkill){
+            skillsControl.start("visible")
+        }
+        else{
+            skillsControl.start("hidden")
+        }
+    },[isVisible ,isVisibleSkill])
+   
 
     function openPop(element){
         var body = document.getElementById("body");
@@ -209,7 +236,6 @@ export default function Body(){
         setToggle(false);
     }
 
-    
 
     return(
         <>
@@ -234,28 +260,39 @@ export default function Body(){
             <hr/>
             
             {/* skils */}
-            <div className="row my-10 " id="skills" >
+            <div >
+                <div className="row my-10 " id="skills" >
                 <div className="container">
                     <h1 className="md:text-6xl text-2xl font-bold text-center mb-3">Skills </h1>
                 </div>
-                <div >
+                <div ref={refSkill}>
                     <ul className="grid grid-cols-4 md:gap-5  gap-2">
 
                         {allSkills
                         .map((element,index)=>(
                             <>
-                                <div
+                                <motion.div
+                                variants={
+                                    {
+                                        hidden:{scale:0 , opacity:0},
+                                        visible:{scale:1 , opacity:1}
+                                    }
+                                }
+                                initial={skillsControl}
+                                animate={skillsControl}
                                 onClick={()=>openPop(element)}  
                                 className="border-4 md:h-24 h-16  
                                                 flex justify-center items-center
                                                 font-bold md:text-2xl text-xs text-center 
-                                                hover:bg-purple-100 hover:scale-125 duration-300" key={index}>{element.title}</div>
+                                                hover:bg-purple-100 hover:scale-125 duration-300" key={index}>{element.title}</motion.div>
                                
                             </>
                         ))}
                     </ul>
                 </div>
             </div>
+            </div>
+            
             <hr/>
 
             <div className="container ">
@@ -300,7 +337,19 @@ export default function Body(){
             </div>
         </div>
         <hr></hr>
-        <Projects/>
+        <div ref={ref}>
+            <motion.div 
+            variants={{
+                hidden:{ opacity: 0, scale: 0.5 },
+                visible:{ opacity: 1, scale: 1 }
+            }}
+            initial="hidden"
+            animate={mainControl}
+            transition={{ duration: 0.5 }}>
+                <Projects />
+            </motion.div>
+        </div>
+        
         <Footer/>
         {toggle && <Detail image={image} title={title} detail={detail} closeDetail={closePop}/>}
         </>
