@@ -177,14 +177,19 @@ export default function Body(){
     const [image ,setImage] = useState();
 
     useEffect(()=>{
-        if(window.innerWidth >= 740){
+        function updateSize(){
+            if(window.innerWidth >= 740){
             setSpaceBetween(50);
             setSlidesPerView(3);
+            }
+            else{
+                setSpaceBetween(1)
+                setSlidesPerView(2);
+            }
+
         }
-        else{
-            setSpaceBetween(1)
-            setSlidesPerView(2);
-        }
+        updateSize();
+        window.addEventListener("resize",updateSize)
     },[])
 
     function openPop(element){
@@ -209,7 +214,7 @@ export default function Body(){
     return(
         <>
         <div id="body" className="container ">
-            <div className=" md:columns-2 md:py-10 mb-4 "  >
+            <div className=" md:columns-2 md:py-10 mb-4 mt-5"  >
                 <div className="flex flex-col justify-center items-center justify-center mr-4 w-full" >
                     <h1 className="md:text-5xl text-center text-md font-bold" > I'm ,</h1>
                     <h1 className="md:text-5xl text-center text-md font-bold"> Moustafa Radi,</h1>
@@ -254,7 +259,7 @@ export default function Body(){
             <hr/>
 
             <div className="container ">
-            <div className="text-center lg:text-5xl text-xl font-bold"> Services </div>
+            <div className="text-center lg:text-5xl text-2xl mt-3 font-bold"> Services </div>
             <Swiper
             style={{marginTop:"5px"}}
                 slidesPerView={slidesPerView}
@@ -285,7 +290,7 @@ export default function Body(){
             <div className="columns-2 h-50 py-5">
                     <div className="flex flex-col justify-center items-center">
                         <h1 className="md:text-5xl text-xs  font-bold">Education</h1>
-                        <h4 className="py-3 text-center font-bold text-xs"> <span className="span">Lebanese University</span>| Bachelors Degree</h4>
+                        <h4 className="py-3 text-center font-bold text-xs"> <span className="span">Lebanese University |</span><br></br> Bachelor degree of computer science</h4>
                     </div>
                     <div className="flex flex-col justify-center items-center">
                         <h1 className="md:text-5xl font-bold">Languages</h1>
