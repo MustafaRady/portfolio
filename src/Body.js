@@ -170,17 +170,20 @@ import {Pagination} from "swiper/modules"
 
 export default function Body(){
     const [spaceBetween,setSpaceBetween] = useState(30);
+    const [slidesPerView,setSlidesPerView] = useState(3);
     const [toggle,setToggle] = useState(false);
     const [title ,setTitle] = useState("");
     const [detail ,setDetail] = useState("");
     const [image ,setImage] = useState();
 
     useEffect(()=>{
-        if(window.innerWidth >= 1000){
-            setSpaceBetween(30);
+        if(window.innerWidth >= 740){
+            setSpaceBetween(50);
+            setSlidesPerView(3);
         }
         else{
-            setSpaceBetween(60)
+            setSpaceBetween(1)
+            setSlidesPerView(2);
         }
     },[])
 
@@ -251,9 +254,10 @@ export default function Body(){
             <hr/>
 
             <div className="container ">
+            <div className="text-center lg:text-5xl text-xl font-bold"> Services </div>
             <Swiper
-            style={{marginTop:"20px"}}
-                slidesPerView={3}
+            style={{marginTop:"5px"}}
+                slidesPerView={slidesPerView}
                 spaceBetween={spaceBetween}
                 pagination={{
                     clickable:true,
@@ -263,11 +267,11 @@ export default function Body(){
             >
                 {services.map((element)=>{
                     return <SwiperSlide>
-                                    <div className=" md:h-96 md:w-96 w-32 h-32 hover:bg-purple-100 duration-300 my-5 rounded-lg md:border-4 box  border-grey-900  text-center md:gap-y-10 flex flex-col justify-center items-center"
+                                    <div className=" lg:h-80 lg:w-80 w-40 h-40 hover:bg-purple-100 duration-300 my-5 rounded-lg lg:border-4 border border-grey-900  text-center lg:gap-y-10 flex flex-col justify-center items-center"
                                          >
-                                        <img src={element.image} className="md:h-32 md:w-32 h-8 w-8 " alt=""></img>
-                                        <div  className="md:text-2xl font-bold title" >{element.title}</div>
-                                        <div  className="md:text-md detail">{element.detail}</div>
+                                        <img src={element.image} className="lg:h-28 lg:w-28 h-8 w-8 " alt=""></img>
+                                        <div  className="lg:text-2xl font-bold title" >{element.title}</div>
+                                        <div  className="lg:text-lg detail">{element.detail}</div>
                                     </div>
                                     
                                 </SwiperSlide>

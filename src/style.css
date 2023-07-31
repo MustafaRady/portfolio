@@ -102,3 +102,8 @@ body{
     height: 50px;
     position:fixed;
 }
+
+.mySwiper{
+    margin:auto;
+    width: 100%;
+}
