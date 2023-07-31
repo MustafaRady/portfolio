@@ -1,4 +1,5 @@
 import React from "react";
+import "./Detail.css"
 
 
 
@@ -7,13 +8,13 @@ export default function Detail({image,title,detail,closeDetail}){
     console.log("Image" + image);
     
     return(
-        <div onClick={()=>closeDetail(false)} className=" fixed inset-0 bg-grey-300  backdrop-blur-sm text-white h-screen w-screen  flex justify-center items-center ">
-           <div style={{width:"900px" , height:"800px"}} className="bg-white text-black  drop-shadow-2xl rounded-lg ">
+        <div onClick={()=>closeDetail(false)} className=" fixed inset-0 bg-grey-300  backdrop-blur-sm text-white h-screen w-screen  flex justify-center items-center  ">
+           <div  className="bg-white text-black  drop-shadow-2xl rounded-lg box ">
             <div className="container">
-                <div className="grid grid-cols-1 gap-y-10 text-center">
-                    <div><img src={image} alt="" height={220} width={220} className="flex mx-auto mt-3"></img></div>
-                    <div className="text-7xl font-bold">{title}</div>
-                    <div className="text-3xl font-bold">{detail}</div>
+                <div className="grid grid-cols-1 md:gap-y-10 gap-y-2 text-center">
+                    <div><img src={image} alt="" className="flex mx-auto mt-3 image"></img></div>
+                    <div className="md:text-5xl box-title font-bold">{title}</div>
+                    <div className="md:text-2xl box-detail font-bold">{detail}</div>
                     </div>
                 </div>
             </div>
