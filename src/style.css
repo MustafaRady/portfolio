@@ -32,9 +32,10 @@ body{
         width: 700px;
         height: 150px;
     }
-    .mySwiper{
-        --swiper-space:10px;
-    }
+}
+
+.show-detail{
+    display: none;
 }
 
 .detail{
