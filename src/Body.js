@@ -178,7 +178,7 @@ export default function Body(){
     const [detail ,setDetail] = useState("");
     const [image ,setImage] = useState();
     const [ref,isVisible]=useInView({
-        threshold:1,
+        threshold:0.5,
     })
     const [refSkill,isVisibleSkill]=useInView({
         threshold:1,
