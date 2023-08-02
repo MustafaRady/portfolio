@@ -143,7 +143,7 @@ import { useInView } from "react-hook-inview";
       {
         id:19,
         title: 'TailwindCss',
-        description: 'Bootstrap is a popular CSS framework that streamlines the process of building responsive and visually appealing web pages. It offers a set of pre-designed components and styles, making it easy to create modern and consistent UIs.',
+        description: 'TailwindCss is a popular CSS framework that streamlines the process of building responsive and visually appealing web pages. It offers a set of pre-designed components and styles, making it easy to create modern and consistent UIs.',
         image: "/languages/no-photos.png"
       },
   ]
