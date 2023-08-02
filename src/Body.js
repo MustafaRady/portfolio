@@ -139,7 +139,13 @@ import { useInView } from "react-hook-inview";
         title: 'Problem-solving',
         description: 'Problem-solving is a crucial skill for developers. It involves identifying challenges, analyzing them, and devising effective solutions. It is essential for overcoming coding obstacles and creating efficient programs.',
         image: "/languages/contribution.png"
-      }
+      },
+      {
+        id:19,
+        title: 'TailwindCss',
+        description: 'Bootstrap is a popular CSS framework that streamlines the process of building responsive and visually appealing web pages. It offers a set of pre-designed components and styles, making it easy to create modern and consistent UIs.',
+        image: "/languages/no-photos.png"
+      },
   ]
 
   const services = [
