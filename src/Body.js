@@ -184,7 +184,7 @@ export default function Body(){
     const [detail ,setDetail] = useState("");
     const [image ,setImage] = useState();
     const [ref,isVisible]=useInView({
-        threshold:0.5,
+        threshold:1,
     })
     const [refSkill,isVisibleSkill]=useInView({
         threshold:1,
@@ -266,12 +266,12 @@ export default function Body(){
             <hr/>
             
             {/* skils */}
-            <div >
+            <div ref={refSkill} >
                 <div className="row my-10 " id="skills" >
                 <div className="container">
                     <h1 className="md:text-6xl text-2xl font-bold text-center mb-3">Skills </h1>
                 </div>
-                <div ref={refSkill}>
+                <div >
                     <ul className="grid grid-cols-4 md:gap-5  gap-2">
 
                         {allSkills
